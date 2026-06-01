@@ -5,168 +5,388 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kenneth Business Solutions</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
-
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fc;
-color:#333;
+background:#f5f7fb;
+color:#222;
 }
 
-header{
-background:linear-gradient(135deg,#003366,#0066cc);
+.topbar{
+background:#021b4f;
 color:white;
-text-align:center;
-padding:80px 20px;
+padding:10px 8%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
 }
 
-header h1{
-font-size:40px;
-margin-bottom:10px;
+.navbar{
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header p{
+.logo{
+font-size:30px;
+font-weight:700;
+color:#0056d6;
+}
+
+.logo span{
+color:#021b4f;
+}
+
+.nav-links a{
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+color:#021b4f;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,25,80,.75),rgba(0,25,80,.75)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero-content h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-content h1 span{
+color:#2f80ff;
+}
+
+.hero-content p{
 font-size:18px;
+line-height:1.8;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#0066cc;
+padding:14px 30px;
+background:#0066ff;
+color:white;
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+border-radius:8px;
+margin-right:10px;
+font-weight:600;
 }
 
-section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
+.btn-outline{
+background:transparent;
+border:2px solid white;
 }
 
-h2{
-text-align:center;
-margin-bottom:30px;
-color:#003366;
-}
-
-.services{
+.stats{
+background:#021b4f;
+color:white;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(4,1fr);
+padding:35px 8%;
+text-align:center;
+}
+
+.stats h2{
+font-size:32px;
+margin-bottom:5px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.nav-links{
+display:none;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
+.topbar{
+font-size:12px;
 }
 
-.card h3{
-margin-bottom:10px;
-color:#0066cc;
 }
 
-.about{
-text-align:center;
-line-height:1.8;
-}
-
-.contact{
-background:#003366;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-
-footer{
-background:#001f3f;
-color:white;
-text-align:center;
-padding:15px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-font-size:22px;
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Kenneth Business Solutions</h1>
-<p>Reliable and Professional Services for Your Business Growth</p>
-<a href="#services" class="btn">Our Services</a>
-</header>
-
-<section id="services">
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Business Consulting</h3>
-<p>Expert advice to help your business succeed.</p>
+<div class="topbar">
+<div>📞 025 790 6873</div>
+<div>📍 Adum, Ghana</div>
 </div>
 
-<div class="card">
-<h3>Online Services</h3>
-<p>Fast and reliable digital solutions.</p>
-</div>
+<nav class="navbar">
+<div class="logo">KBS <span>Business</span></div>
 
-<div class="card">
-<h3>Customer Support</h3>
-<p>Friendly support whenever you need help.</p>
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
+</nav>
 
-<div class="card">
-<h3>Technology Solutions</h3>
-<p>Modern technology services for businesses.</p>
-</div>
+<section class="hero">
 
-</div>
-</section>
+<div class="hero-content">
 
-<section class="about">
-<h2>About Us</h2>
+<h1>
+We Provide Solutions
+That Drive Your Business
+to <span>Success.</span>
+</h1>
+
 <p>
-Kenneth Business Solutions is committed to providing quality services
-that help businesses grow and achieve their goals.
-We focus on professionalism, innovation, and customer satisfaction.
+Kenneth Business Solutions provides professional,
+reliable and innovative services that help
+businesses grow and achieve their goals.
 </p>
+
+<a href="#services" class="btn">Our Services</a>
+<a href="#contact" class="btn btn-outline">Contact Us</a>
+
+</div>
+
 </section>
 
-<section class="contact">
-<h2>Contact Us</h2>
-<p>Phone: +233 257 906 873</p>
-<p>Email: kennethyeboah223@gmail.com</p>
-<p>Location: Adum, Ghana</p>
+<section class="stats">
+
+<div>
+<h2>50+</h2>
+<p>Happy Clients</p>
+</div>
+
+<div>
+<h2>100+</h2>
+<p>Projects Done</p>
+</div>
+
+<div>
+<h2>5+</h2>
+<p>Years Experience</p>
+</div>
+
+<div>
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</section><section id="services" style="padding:80px 8%;">
+
+<h2 style="text-align:center;font-size:40px;color:#021b4f;margin-bottom:50px;">
+Our Services
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
+<h3 style="color:#0066ff;margin-bottom:15px;">Business Consulting</h3>
+<p>Expert advice and strategies to help your business grow and succeed.</p>
+</div>
+
+<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
+<h3 style="color:#0066ff;margin-bottom:15px;">Digital Solutions</h3>
+<p>Fast and reliable digital services tailored to your business needs.</p>
+</div>
+
+<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
+<h3 style="color:#0066ff;margin-bottom:15px;">Customer Support</h3>
+<p>Friendly and professional support whenever you need help.</p>
+</div>
+
+<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
+<h3 style="color:#0066ff;margin-bottom:15px;">Technology Solutions</h3>
+<p>Modern technology services to improve business efficiency.</p>
+</div>
+
+</div>
+
 </section>
 
-<footer>
-<p>© 2026 Kenneth Business Solutions. All Rights Reserved.</p>
+
+<section id="about" style="padding:80px 8%;background:white;">
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;">
+
+<div>
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
+style="width:100%;border-radius:20px;">
+</div>
+
+<div>
+
+<h2 style="font-size:42px;color:#021b4f;margin-bottom:20px;">
+About Kenneth Business Solutions
+</h2>
+
+<p style="line-height:1.9;font-size:17px;">
+Kenneth Business Solutions is committed to providing
+quality services that help businesses grow and achieve
+their goals. We focus on professionalism, innovation,
+customer satisfaction and long-term success.
+</p>
+
+<br>
+
+<p style="line-height:1.9;font-size:17px;">
+Our mission is to help businesses become more efficient,
+more profitable and better connected with their customers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" style="padding:80px 8%;background:#021b4f;color:white;">
+
+<h2 style="text-align:center;font-size:40px;margin-bottom:40px;">
+Contact Us
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
+
+<div>
+
+<h3 style="margin-bottom:20px;">Get In Touch</h3>
+
+<p>📞 025 790 6873</p>
+<br>
+
+<p>📧 kennethyeboah223@gmail.com</p>
+<br>
+
+<p>📍 Adum, Ghana</p>
+
+</div>
+
+<div>
+
+<form>
+
+<input type="text" placeholder="Your Name"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:8px;">
+
+<input type="email" placeholder="Your Email"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:8px;">
+
+<textarea placeholder="Your Message"
+style="width:100%;height:120px;padding:15px;border:none;border-radius:8px;"></textarea>
+
+<br><br>
+
+<button
+style="background:#0066ff;color:white;border:none;padding:14px 30px;border-radius:8px;font-size:16px;">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section><footer style="background:#01163f;color:white;padding:40px 8%;text-align:center;">
+
+<h3 style="margin-bottom:15px;">
+Kenneth Business Solutions
+</h3>
+
+<p style="margin-bottom:10px;">
+Professional and reliable solutions for business growth.
+</p>
+
+<p>
+© 2026 Kenneth Business Solutions. All Rights Reserved.
+</p>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/233257906873" target="_blank">💬</a>
+
+<a href="https://wa.me/233257906873"
+target="_blank"
+style="
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+z-index:999;
+">
+💬
+</a>
+
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+if(entry.isIntersecting){
+entry.target.style.opacity='1';
+entry.target.style.transform='translateY(0)';
+}
+});
+});
+
+document.querySelectorAll('section').forEach((section)=>{
+section.style.opacity='0';
+section.style.transform='translateY(40px)';
+section.style.transition='all 0.8s ease';
+observer.observe(section);
+});
+
+</script>
 
 </body>
 </html>
