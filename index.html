@@ -462,7 +462,8 @@ observer.observe(section);
 </script>
 <script>
 function toggleMenu() {
-  alert('Menu function works');
+const nav = document.querySelector('.nav-links');
+nav.classList.toggle('active');
 }
 </script>
 </body>
