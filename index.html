@@ -219,7 +219,7 @@ padding:0 12%;
 
 <nav class="navbar">
 <div class="logo">KBS Business</div>
-<div class="menu-btn">&#9776;</div>
+<div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
 <div class="nav-links">
 <a href="#">Home</a>
 <a href="#services">Services</a>
@@ -449,6 +449,11 @@ observer.observe(section);
 });
 
 </script>
-
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.classList.toggle('active');
+}
+</script>
 </body>
 </html>
