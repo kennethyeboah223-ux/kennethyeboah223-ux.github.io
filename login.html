@@ -19,7 +19,7 @@
 
     nav {
       background: #020617;
-      padding: 15px;
+      padding: 16px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -31,6 +31,7 @@
       margin: 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
     header {
@@ -44,39 +45,49 @@
     }
 
     .logo {
-      width: 90px;
-      height: 90px;
-      background: white;
-      color: #0b5ed7;
-      border-radius: 50%;
+      width: 130px;
+      height: 130px;
       margin: auto;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #0b5ed7, #020617);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
-      font-weight: bold;
+      color: white;
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+      border: 4px solid white;
+      transform: rotate(-3deg);
+    }
+
+    .logo span {
+      transform: rotate(3deg);
     }
 
     header h1 {
-      font-size: 38px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
+      line-height: 1.6;
     }
 
     .main-button {
       display: inline-block;
       background: #25D366;
       color: white;
-      padding: 14px 24px;
+      padding: 15px 28px;
       margin-top: 25px;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 17px;
     }
 
     section {
@@ -86,30 +97,43 @@
 
     .box {
       background: white;
-      max-width: 850px;
+      max-width: 900px;
       margin: 18px auto;
-      padding: 28px;
-      border-radius: 16px;
+      padding: 30px;
+      border-radius: 18px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
 
-    .services {
+    .dark-section {
+      background: #020617;
+      color: white;
+    }
+
+    .services,
+    .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      max-width: 950px;
+      gap: 18px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .service-card {
+    .service-card,
+    .testimonial-card {
       background: white;
+      color: #111827;
       padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
     }
 
     .service-card h3 {
       color: #0b5ed7;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 22px;
     }
 
     input, textarea {
@@ -131,11 +155,6 @@
       cursor: pointer;
     }
 
-    .dark-section {
-      background: #020617;
-      color: white;
-    }
-
     footer {
       background: #020617;
       color: white;
@@ -147,6 +166,24 @@
       color: #6b7280;
       font-size: 14px;
     }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 62px;
+      height: 62px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+      z-index: 99;
+    }
   </style>
 </head>
 
@@ -156,15 +193,15 @@
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
+  <a href="#testimonials">Reviews</a>
   <a href="#contact">Contact</a>
-  <a href="#login">Login</a>
 </nav>
 
 <header id="home">
-  <div class="logo">KBS</div>
+  <div class="logo"><span>KBS</span></div>
   <h1>KBS Business</h1>
   <p>Website creation, online business support, and digital services for individuals and small businesses.</p>
-<a class="main-button" href="https://wa.me/233257906873">Chat on WhatsApp</a>
+  <a class="main-button" href="https://wa.me/233257906873">Chat on WhatsApp</a>
 </header>
 
 <section id="about">
@@ -187,33 +224,47 @@
   <div class="services">
     <div class="service-card">
       <h3>Website Creation</h3>
-      <p>We help create clean and professional websites for personal and business use.</p>
+      <p>Clean and professional websites for personal and business use.</p>
     </div>
 
     <div class="service-card">
       <h3>Website Support</h3>
-      <p>We help fix website problems, update pages, and improve website design.</p>
+      <p>Help with fixing website problems, updating pages, and improving design.</p>
     </div>
 
     <div class="service-card">
       <h3>Online Business Setup</h3>
-      <p>We guide people who want to start or grow their business online.</p>
+      <p>Guidance for people who want to start or grow their business online.</p>
     </div>
 
     <div class="service-card">
       <h3>Digital Assistance</h3>
-      <p>We help with online tools, digital accounts, forms, and customer support.</p>
+      <p>Help with online tools, digital accounts, forms, and customer support.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="box">
-    <h2>Why Choose Us?</h2>
-    <p>✅ Friendly support</p>
-    <p>✅ Simple and clear communication</p>
-    <p>✅ Professional website design</p>
-    <p>✅ Fast help for online business needs</p>
+<section id="testimonials">
+  <h2>Customer Testimonials</h2>
+
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Excellent service and support. Very helpful and professional."</p>
+      <strong>- Happy Customer</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"KBS Business helped me understand how to grow online."</p>
+      <strong>- Business Client</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Fast response, clear communication, and trusted digital help."</p>
+      <strong>- Online Customer</strong>
+    </div>
   </div>
 </section>
 
@@ -221,9 +272,9 @@
   <div class="box">
     <h2>Contact KBS Business</h2>
     <p>Email: kennethyeboah223@gmail.com</p>
-    <p>WhatsApp: +233 XXXXXXXX</p>
+    <p>WhatsApp: +233 25 790 6873</p>
 
-    <a class="main-button" href="https://wa.me/233XXXXXXXXX">Send WhatsApp Message</a>
+    <a class="main-button" href="https://wa.me/233257906873">Send WhatsApp Message</a>
 
     <h3>Send a Message</h3>
     <input type="text" placeholder="Your Name">
@@ -232,21 +283,7 @@
     <br>
     <button onclick="alert('Thank you! Your message has been received.')">Send Message</button>
 
-    <p class="small">Note: This contact form is for design now. Later we can connect it to email.</p>
-  </div>
-</section>
-
-<section id="login" class="dark-section">
-  <div class="box">
-    <h2>Customer Login / Sign Up</h2>
-    <p class="small">This is a demo login. Later we can connect it to a real database.</p>
-
-    <input id="username" type="text" placeholder="Enter username">
-    <input id="password" type="password" placeholder="Enter password">
-    <br>
-    <button onclick="signup()">Sign Up</button>
-    <button onclick="login()">Login</button>
-    <p id="msg"></p>
+    <p class="small">Note: This form is for design now. Later we can connect it to your real email.</p>
   </div>
 </section>
 
@@ -255,35 +292,7 @@
   <p>Website & Digital Services</p>
 </footer>
 
-<script>
-  function signup() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-
-    if (user === "" || pass === "") {
-      document.getElementById("msg").innerHTML = "Please enter username and password.";
-      return;
-    }
-
-    localStorage.setItem("kbsUser", user);
-    localStorage.setItem("kbsPass", pass);
-    document.getElementById("msg").innerHTML = "Account created successfully!";
-  }
-
-  function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-
-    let savedUser = localStorage.getItem("kbsUser");
-    let savedPass = localStorage.getItem("kbsPass");
-
-    if (user === savedUser && pass === savedPass) {
-      document.getElementById("msg").innerHTML = "Login successful!";
-    } else {
-      document.getElementById("msg").innerHTML = "Wrong username or password.";
-    }
-  }
-</script>
+<a href="https://wa.me/233257906873" class="floating-whatsapp">💬</a>
 
 </body>
 </html>
