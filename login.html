@@ -80,11 +80,21 @@ document.getElementById('password').value;
 
 alert("About to contact Supabase");
 
+try {
 const { error } =
 await supabase.auth.signUp({
 email,
 password
 });
+
+document.getElementById('msg').innerText =
+error ? error.message :
+'Check your email for verification.';
+}
+catch(err) {
+document.getElementById('msg').innerText =
+'ERROR: ' + err.message;
+}
 
 document.getElementById('msg').innerText =
 error ? error.message :
