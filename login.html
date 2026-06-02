@@ -1,123 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>KBS Login</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f5f7fb;
-padding:20px;
-}
-
-.box{
-max-width:400px;
-margin:auto;
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-}
-
-button{
-width:100%;
-padding:12px;
-background:#0066ff;
-color:white;
-border:none;
-border-radius:6px;
-}
-</style>
+  <title>KBS Business</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    header {
+      background: #0b5ed7;
+      color: white;
+      padding: 30px;
+    }
+    section {
+      padding: 25px;
+    }
+    .box {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    a.button {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="box">
-<h2>KBS Login / Sign Up NEW VERSION</h2>
+<header>
+  <h1>KBS Business</h1>
+  <p>Welcome to my professional business website</p>
+</header>
 
-<input type="email" id="email" placeholder="Email">
+<section>
+  <div class="box">
+    <h2>About Us</h2>
+    <p>We provide trusted services and business support for customers.</p>
+  </div>
 
-<input type="password" id="password" placeholder="Password">
+  <div class="box">
+    <h2>Our Services</h2>
+    <p>Website help, business support, online services, and customer care.</p>
+  </div>
 
-<button onclick="signUp()">SIGN UP TEST</button>
-
-<br><br>
-
-<button onclick="signIn()">Login</button>
-
-<p id="msg" style="color:red;font-weight:bold;">TEST</p>
-</div>
-
-<script>
-const supabaseUrl =
-'https://nqbnfhgvexokxjobrasp.supabase.co';
-
-const supabaseKey =
-'sb_publishable_nDhlT9nfY02Jf6brBAzz9w_wYPVQulZ';
-alert("HELLO TEST");
-
-const supabase =
-window.supabase.createClient(
-supabaseUrl,
-supabaseKey
-);
-
-async function signUp() {
-    alert("SignUp function started");
-const email =
-document.getElementById('email').value;
-
-const password =
-document.getElementById('password').value;
-
-alert("About to contact Supabase");
-
-try {
-const { error } =
-await supabase.auth.signUp({
-email,
-password
-});
-
-document.getElementById('msg').innerText =
-error ? error.message :
-'Check your email for verification.';
-}
-catch(err) {
-document.getElementById('msg').innerText =
-'ERROR: ' + err.message;
-}
-
-
-
-
-async function signIn() {
-const email =
-document.getElementById('email').value;
-
-const password =
-document.getElementById('password').value;
-
-const { error } =
-await supabase.auth.signInWithPassword({
-email,
-password
-});
-
-document.getElementById('msg').innerText =
-error ? error.message :
-'Login successful!';
-}
-</script>
+  <div class="box">
+    <h2>Contact Us</h2>
+    <p>Email: kennethyeboah223@gmail.com</p>
+    <a class="button" href="https://wa.me/233XXXXXXXXX">Chat on WhatsApp</a>
+  </div>
+</section>
 
 </body>
 </html>
