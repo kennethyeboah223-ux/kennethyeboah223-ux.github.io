@@ -225,6 +225,18 @@ color:#111827;
 </div>
 </nav>
 
+<div id="loginBox" style="padding:20px;background:#111;color:white;text-align:center;">
+  <h2>Login / Sign Up</h2>
+
+  <input id="email" type="email" placeholder="Enter email" style="padding:12px;margin:5px;width:80%;"><br>
+
+  <input id="password" type="password" placeholder="Enter password" style="padding:12px;margin:5px;width:80%;"><br>
+
+  <button onclick="signUp()" style="padding:12px;margin:5px;">Sign Up</button>
+  <button onclick="login()" style="padding:12px;margin:5px;">Login</button>
+
+  <p id="authMsg"></p>
+</div>
 <header id="home">
   <div class="logo"><span>KBS</span></div>
   <h1>KBS Business</h1>
@@ -393,6 +405,6 @@ const supabaseClient = supabase.createClient(
   supabaseKey
 );
 </script>
-</body>
+
 
 </html>
