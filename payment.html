@@ -72,7 +72,9 @@
     }
   </style>
 </head>
-
+<button class="pay-btn" onclick="payWithPaystack()">
+  Pay with MTN MoMo
+</button>
 <body>
 
   <div class="payment-box">
@@ -82,12 +84,31 @@
 
     <p>Pay securely for KBS Business services using MTN Mobile Money.</p>
 
-    <button class="pay-btn" onclick="alert('Hubtel payment will be connected soon')">
-      Pay with MTN MoMo
-    </button>
+    
 
     <a class="back-link" href="index.html">Go back home</a>
   </div>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 
+<script>
+function payWithPaystack() {
+  let handler = PaystackPop.setup({
+    key: pk_test_24f525900f5c4084d07a45189a283dda18824bfb
+    email: 'customer@example.com',
+    amount: 1000,
+    currency: 'GHS',
+
+    callback: function(response) {
+      alert('Payment successful!');
+    },
+
+    onClose: function() {
+      alert('Payment cancelled');
+    }
+  });
+
+  handler.openIframe();
+}
+</script>
 </body>
 </html>
