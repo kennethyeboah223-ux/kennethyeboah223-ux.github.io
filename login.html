@@ -419,7 +419,7 @@ async function signUp() {
     password: password
   });
 
-document.getElementById('authMsg').innerText =
+
   error ? error.message : 'Welcome, ' + email;
 
 
@@ -436,8 +436,11 @@ async function login() {
     password: password
   });
 console.log(error);
-  document.getElementById('authMsg').innerText =
-    error ? error.message : 'Login successful!';
+
+document.getElementById('logoutBtn').style.display = 'inline-block';
+
+document.getElementById('authMsg').innerText =
+error ? error.message : 'Login successful!';
 }
 </script>
 
