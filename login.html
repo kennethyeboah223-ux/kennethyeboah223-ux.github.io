@@ -431,21 +431,20 @@ async function login() {
     password: password
   });
 
-  document.getElementById('authMsg').innerText =
-  error ? error.message : 'Welcome, ' + email;
-
-if (!error) {
-  document.getElementById('logoutBtn').style.display = 'inline-block';
+  if (error) {
+    document.getElementById('authMsg').innerText = error.message;
+  } else {
+    document.getElementById('authMsg').innerText = 'Welcome, ' + email;
+    document.getElementById('logoutBtn').style.display = 'inline-block';
+  }
 }
 
 async function logout() {
   await supabaseClient.auth.signOut();
 
   document.getElementById('authMsg').innerText = 'You have logged out';
-
   document.getElementById('logoutBtn').style.display = 'none';
 }
-
 </script>
 
 
