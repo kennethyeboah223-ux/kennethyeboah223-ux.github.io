@@ -235,7 +235,7 @@ color:#111827;
   <button onclick="signUp()" style="padding:12px;margin:5px;">Sign Up</button>
   <button onclick="login()" style="padding:12px;margin:5px;">Login</button>
 
-  <p id="authMsg" style="color:white;font-size:20px;margin-top:20px;">TEST MESSAGE</p>
+<p id="authMsg" style="color:white;font-size:20px;margin-top:20px;"></p>
 </div>
 <header id="home">
   <div class="logo"><span>KBS</span></div>
@@ -400,7 +400,7 @@ const supabaseUrl = "https://nqbnfhgvexokxjobrasp.supabase.co";
 
 const supabaseKey = sb_publishable_nDhlT9nfY02Jf6brBAzz9w_wYPVQulZ
 
-const supabaseClient = supabase.createClient(
+const supabaseClient = window.supabase.createClient(
   supabaseUrl,
   supabaseKey
 );
