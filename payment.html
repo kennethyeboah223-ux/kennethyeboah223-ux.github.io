@@ -123,7 +123,7 @@ function payWithPaystack() {
     currency: 'GHS',
 
     callback: function(response) {
-      alert('Payment successful! Thank you for choosing KBS Business.');
+      window.location.href = "success.html";
     },
 
     onClose: function() {
