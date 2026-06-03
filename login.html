@@ -416,8 +416,12 @@ async function signUp() {
     password: password
   });
 
-  document.getElementById('authMsg').innerText =
-    error ? error.message : 'Sign up successful! Check your email.';
+document.getElementById('authMsg').innerText =
+  error ? error.message : 'Welcome, ' + email;
+
+if (!error) {
+  document.getElementById('logoutBtn').style.display = 'inline-block';
+}
 }
 
 async function login() {
@@ -430,9 +434,25 @@ async function login() {
   });
 
   document.getElementById('authMsg').innerText =
-    error ? error.message : 'Login successful!';
+  error ? error.message : 'Welcome, ' + email;
+
+if (!error) {
+  document.getElementById('logoutBtn').style.display = 'inline-block';
+}
+}
+if (!
+
+async function logout() {
+  await supabaseClient.auth.signOut();
+
+  document.getElementById('authMsg').innerText =
+    'You have logged out';
+
+  document.getElementById('logoutBtn').style.display =
+    'none';
 }
 </script>
+
 
 
 </html>
