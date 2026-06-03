@@ -81,9 +81,18 @@
     <h1>KBS Business Payment</h1>
 
     <p>Pay securely for KBS Business services using MTN Mobile Money.</p>
+<div>
+  <button class="pay-btn" onclick="selectService('Website Design', 5000)">Website Design - GHS 50</button>
+  <br><br>
+  <button class="pay-btn" onclick="selectService('Business Support', 3000)">Business Support - GHS 30</button>
+  <br><br>
+  <button class="pay-btn" onclick="selectService('Online Marketing', 2000)">Online Marketing - GHS 20</button>
+</div>
 
+<p id="selectedService">Selected: Website Design - GHS 50</p>
 <button class="pay-btn" onclick="payWithPaystack()">
   Pay with MTN MoMo
+  
 </button>
 
     <a class="back-link" href="index.html">Go back home</a>
@@ -91,15 +100,24 @@
 <script src="https://js.paystack.co/v1/inline.js"></script>
 
 <script>
+let selectedAmount = 5000;
+let selectedService = 'Website Design';
+
+function selectService(service, amount) {
+  selectedService = service;
+  selectedAmount = amount;
+  document.getElementById('selectedService').innerText =
+    'Selected: ' + service + ' - GHS ' + (amount / 100);
+}
 function payWithPaystack() {
   let handler = PaystackPop.setup({
     key: 'pk_live_f5146d54486857fc2dd6795a3bbc4570b8f3042e',
     email: 'kennethyeboah223@gmail.com',
-    amount: 1000,
+    amount: selectedAmount,
     currency: 'GHS',
 
     callback: function(response) {
-      alert('Payment successful!');
+      alert('Payment successful! Thank you for choosing KBS Business.');
     },
 
     onClose: function() {
