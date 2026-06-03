@@ -557,6 +557,18 @@ const nav = document.querySelector('.nav-links');
 nav.classList.toggle('active');
 }
 </script>
+
+<script>
+const supabaseUrl = 'https://nqbnfhgvexokxjobrasp.supabase.co';
+
+const supabaseKey = 'sb_publishable_nDhlT9nfY02Jf6brBAzz9w_wYPVQulZ';
+
+const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+</script>
+
 <footer style="text-align:center;padding:20px;background:#01163f;color:white;">
 <p>&copy; 2026 KBS Business. All Rights Reserved.</p>
 
