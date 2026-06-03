@@ -439,8 +439,6 @@ async function login() {
 if (!error) {
   document.getElementById('logoutBtn').style.display = 'inline-block';
 }
-}
-if (!
 
 async function logout() {
   await supabaseClient.auth.signOut();
