@@ -591,7 +591,7 @@ const supabase = window.supabase.createClient(
   supabaseUrl,
   supabaseKey
 );
-</script>
+
 async function saveCustomer() {
   const name = document.getElementById("customerName").value;
   const email = document.getElementById("customerEmail").value;
@@ -607,6 +607,7 @@ async function saveCustomer() {
     alert("Thank you! Your details have been saved.");
   }
 }
+</script>
 <footer style="text-align:center;padding:20px;background:#01163f;color:white;">
 <p>&copy; 2026 KBS Business. All Rights Reserved.</p>
 
