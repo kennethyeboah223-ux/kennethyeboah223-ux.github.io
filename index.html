@@ -595,11 +595,15 @@ const supabase = window.supabase.createClient(
 async function saveCustomer() {
   const name = document.getElementById("customerName").value;
   const email = document.getElementById("customerEmail").value;
-  const phone = document.getElementById("customerPhone").value;
+  const message = document.getElementById("customerPhone").value;
 
   const { data, error } = await supabase
   .from("Customers")
-  .insert([{ Name: name, Email: email, Phone: phone }])
+  .insert([{ 
+    Name: name, 
+    Email: email, 
+    Message: message 
+  }])
   .select();
 if (error) {
   alert("Error: " + error.message);
