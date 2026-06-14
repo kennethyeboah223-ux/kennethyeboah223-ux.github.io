@@ -611,6 +611,49 @@ if (error) {
 }
 }
 </script>
+<section id="buy-data" style="padding:40px; background:#f5f7fb;">
+  <h2>Buy Data Bundle</h2>
+
+  <label>Choose Network</label><br>
+  <select id="network">
+    <option>MTN</option>
+    <option>Telecel</option>
+    <option>AirtelTigo</option>
+  </select><br><br>
+
+  <label>Choose Bundle</label><br>
+  <select id="bundle">
+    <option>1GB - GH₵5</option>
+    <option>2GB - GH₵10</option>
+    <option>5GB - GH₵25</option>
+    <option>10GB - GH₵50</option>
+  </select><br><br>
+
+  <label>Customer Phone Number</label><br>
+  <input type="tel" id="phone" placeholder="Enter number" style="padding:10px; width:100%; max-width:350px;"><br><br>
+
+  <button onclick="orderData()" style="background:#021b4f;color:white;padding:12px 20px;border:none;border-radius:8px;">
+    Order on WhatsApp
+  </button>
+</section>
+
+<script>
+function orderData() {
+  let network = document.getElementById("network").value;
+  let bundle = document.getElementById("bundle").value;
+  let phone = document.getElementById("phone").value;
+
+  if (phone === "") {
+    alert("Please enter customer phone number");
+    return;
+  }
+
+  let myWhatsApp = "233XXXXXXXXX"; // replace with your WhatsApp number
+  let message = `Hello KBS Business, I want to buy data.%0A%0ANetwork: ${network}%0ABundle: ${bundle}%0APhone Number: ${phone}`;
+
+  window.open(`https://wa.me/${myWhatsApp}?text=${message}`, "_blank");
+}
+</script>
 <footer style="text-align:center;padding:20px;background:#01163f;color:white;">
 <p>&copy; 2026 KBS Business. All Rights Reserved.</p>
 
