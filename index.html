@@ -3,668 +3,739 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kenneth Business Solutions</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6144252715940483"
-     crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>KBS Video - Video Downloader</title>
+
+<meta name="description"
+content="KBS Video - Download videos from sources that permit downloading.">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5f7fb;
-color:#222;
+    background:#f5f7fb;
+    color:#111827;
+    padding-bottom:80px;
 }
 
-.topbar{
-background:#021b4f;
-color:white;
-padding:10px 8%;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-font-size:14px;
-}
+/* HEADER */
 
-.navbar{
-background:white;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:relative;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:1000;
+header{
+    background:#111827;
+    color:white;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
-color:#0056d6;
-white-space:nowrap;
+    font-size:22px;
+    font-weight:800;
 }
-.menu-btn{
-display:none;
-font-size:30px;
-font-weight:bold;
-cursor:pointer;
-}
+
 .logo span{
-color:#021b4f;
+    color:#ffd600;
 }
 
-.nav-links a{
-text-decoration:none;
-margin-left:20px;
-font-weight:600;
-color:#021b4f;
+.premium-btn{
+    background:#ffd600;
+    color:#111827;
+    padding:9px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    border:none;
 }
 
-.hero{
-height:90vh;
-background:
-linear-gradient(rgba(0,25,80,.75),rgba(0,25,80,.75)),
-url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 8%;
-color:white;
-}
-
-.hero-content{
-max-width:650px;
-}
-
-.hero-content h1{
-font-size:60px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero-content h1 span{
-color:#2f80ff;
-}
-
-.hero-content p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-background:#0066ff;
-color:white;
-text-decoration:none;
-border-radius:8px;
-margin-right:10px;
-font-weight:600;
-}
-
-.btn-outline{
-background:transparent;
-border:2px solid white;
-}
-
-.stats{
-background:#021b4f;
-color:white;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-padding:35px 8%;
-text-align:center;
-}
-
-.stats h2{
-font-size:32px;
-margin-bottom:5px;
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:38px;
-}
-
-.nav-links{
-display:none !important;
-flex-direction:column;
-}
-
-.nav-links.active{
-display:flex !important;
-flex-direction:column;
-position:absolute;
-top:80px;
-right:20px;
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-z-index:1000;
-}
-.menu-btn{
-display:block;
-}
-.menu-btn{
-position:absolute;
-right:20px;
-top:50%;
-transform:translateY(-50%);
-}
-.stats{
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.topbar{
-font-size:12px;
-}
-
-}
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px){
-
-.hero-content h1{
-font-size:50px;
-}
+/* HERO */
 
 .hero{
-padding:0 5%;
+    background:linear-gradient(
+        135deg,
+        #111827,
+        #003b95,
+        #0057d9
+    );
+
+    color:white;
+    padding:65px 20px 75px;
+    text-align:center;
 }
 
-.nav-links a{
-margin-left:12px;
-font-size:14px;
+.hero h1{
+    font-size:38px;
+    line-height:1.15;
+    margin-bottom:15px;
 }
 
+.hero h1 span{
+    color:#ffd600;
 }
 
-/* Desktop */
-@media (min-width: 1025px){
-
-.hero-content{
-max-width:700px;
+.hero p{
+    max-width:550px;
+    margin:auto;
+    color:#dbeafe;
+    line-height:1.7;
+    font-size:14px;
 }
 
-.hero-content h1{
-font-size:72px;
+/* DOWNLOAD BOX */
+
+.download-box{
+    background:white;
+    max-width:600px;
+    margin:-35px auto 0;
+    position:relative;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.hero-content p{
-font-size:20px;
+.download-box h2{
+    font-size:20px;
+    margin-bottom:15px;
 }
 
-.nav-links a{
-font-size:16px;
+.url-input{
+    width:100%;
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    outline:none;
+    font-size:14px;
 }
+
+.url-input:focus{
+    border-color:#0057d9;
+}
+
+.analyze-btn{
+    width:100%;
+    margin-top:12px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#0057d9;
+    color:white;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.analyze-btn:hover{
+    background:#0045ad;
+}
+
+/* NOTICE */
+
+.notice{
+    max-width:600px;
+    margin:18px auto;
+    padding:15px 20px;
+    background:#fff8d6;
+    border-left:4px solid #ffd600;
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* SECTIONS */
+
+.section{
+    max-width:1000px;
+    margin:auto;
+    padding:55px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.section-text{
+    text-align:center;
+    color:#667085;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.feature-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.feature p{
+    font-size:13px;
+    color:#667085;
+    line-height:1.6;
+}
+
+/* PLANS */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.plan{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.plan.premium{
+    border:2px solid #ffd600;
+}
+
+.plan h3{
+    font-size:20px;
+}
+
+.price{
+    font-size:28px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.plan ul{
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.plan li{
+    margin:10px 0;
+    font-size:13px;
+}
+
+.plan button{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:#0057d9;
+    color:white;
+    font-weight:700;
+}
+
+.premium button{
+    background:#ffd600;
+    color:#111827;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:#cbd5e1;
+    padding:35px 20px;
+    text-align:center;
+    font-size:12px;
+}
+
+footer strong{
+    color:white;
+    font-size:18px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:white;
+    border-top:1px solid #e5e7eb;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:2000;
+}
+
+.bottom-nav a{
+    text-decoration:none;
+    color:#667085;
+    text-align:center;
+    font-size:11px;
+}
+
+.bottom-nav span{
+    display:block;
+    font-size:22px;
+}
+
+.bottom-nav a.active{
+    color:#0057d9;
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .plans{
+        grid-template-columns:1fr;
+    }
+
+    .download-box{
+        margin:-30px 15px 0;
+    }
 
 }
 
-/* Large Screens */
-@media (min-width: 1400px){
-
-.hero{
-padding:0 12%;
-}
-
-}
 </style>
 </head>
 
 <body>
-<div style="padding:20px;background:#111;color:white;text-align:center;">
-  <h2>Login / Sign Up</h2>
 
-  <input id="email" type="email" placeholder="Enter email" style="padding:12px;margin:5px;width:80%;"><br>
 
-  <input id="password" type="password" placeholder="Enter password" style="padding:12px;margin:5px;width:80%;"><br>
+<!-- HEADER -->
 
-  <button onclick="signUp()" style="padding:12px;margin:5px;">Sign Up</button>
+<header>
 
-  <button onclick="login()" style="padding:12px;margin:5px;">Login</button>
+    <div class="logo">
+        KBS <span>Video</span>
+    </div>
 
-  <p id="authMsg"></p>
-<button onclick="window.location.href='payment.html'" style="padding:12px 25px;background:#0057d9;color:white;border:none;border-radius:10px;font-weight:bold;">
-  Pay Now
-</button>
+    <button class="premium-btn"
+    onclick="showPremium()">
+        ⭐ Premium
+    </button>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>
+        Download Your Videos
+        <span>Simply.</span>
+    </h1>
+
+    <p>
+        Paste a video link from a source that permits downloading
+        and we'll help you access the available download.
+    </p>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<div class="download-box">
+
+    <h2>🎬 Download Video</h2>
+
+    <input
+        id="videoURL"
+        class="url-input"
+        type="url"
+        placeholder="Paste video URL here..."
+    >
+
+    <button
+        class="analyze-btn"
+        onclick="analyzeVideo()">
+
+        🔍 Analyze Video
+
+    </button>
+
+    <div
+        id="result"
+        style="margin-top:15px;text-align:center;font-size:13px;">
+    </div>
 
 </div>
-<div class="topbar">
-<a href="tel:+233257906873">📞 025 790 6873</a>
-<div>📍 Adum, Ghana</div>
+
+
+<!-- NOTICE -->
+
+<div class="notice">
+
+    ⚠️ <strong>Important:</strong>
+    KBS Video is intended for videos you own,
+    have permission to download, or that the source
+    explicitly makes available for downloading.
+
 </div>
 
-<nav class="navbar">
-<div class="logo">KBS Business</div>
-<div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
-<div class="nav-links">
-<a href="#home" onclick="toggleMenu()">Home</a>
-<a href="about.html" onclick="toggleMenu()">About Us</a>
-<a href="#services" onclick="toggleMenu()">Services</a>
-<a href="#reviews" onclick="toggleMenu()">Reviews</a>
-<a href="privacy.html" onclick="toggleMenu()">Privacy Policy</a>
-<a href="terms.html" onclick="toggleMenu()">Terms & Conditions</a>
-<a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
+
+<!-- FEATURES -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Why Use KBS Video?
+    </h2>
+
+    <p class="section-text">
+        Simple tools designed for your phone.
+    </p>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Simple
+            </h3>
+
+            <p>
+                Paste a permitted video link
+                and start the process.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Mobile Friendly
+            </h3>
+
+            <p>
+                Designed to work comfortably
+                on smartphones.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>
+                Privacy
+            </h3>
+
+            <p>
+                We aim to minimize unnecessary
+                collection of your information.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PLANS -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Choose Your Plan
+    </h2>
+
+    <p class="section-text">
+        Start free and upgrade when you need more.
+    </p>
+
+
+    <div class="plans">
+
+
+        <!-- FREE -->
+
+        <div class="plan">
+
+            <h3>
+                🆓 Free
+            </h3>
+
+            <div class="price">
+                GH₵0
+            </div>
+
+            <ul>
+
+                <li>✅ Basic downloads</li>
+
+                <li>✅ Mobile access</li>
+
+                <li>📢 Advertisements</li>
+
+                <li>⏳ Standard limits</li>
+
+            </ul>
+
+            <button
+            onclick="scrollToDownloader()">
+
+                Start Free
+
+            </button>
+
+        </div>
+
+
+        <!-- PREMIUM -->
+
+        <div class="plan premium">
+
+            <h3>
+                ⭐ Premium
+            </h3>
+
+            <div class="price">
+                GH₵10
+                <small>/month</small>
+            </div>
+
+            <ul>
+
+                <li>🚫 No advertisements</li>
+
+                <li>⚡ Higher limits</li>
+
+                <li>📥 Batch downloads</li>
+
+                <li>📊 Download history</li>
+
+            </ul>
+
+            <button
+            onclick="showPremium()">
+
+                Get Premium
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>
+        KBS Video
+    </strong>
+
+    <p style="margin-top:10px;">
+        A KBS Business Solutions project.
+    </p>
+
+    <p style="margin-top:10px;">
+        © 2026 KBS Business Solutions
+    </p>
+
+</footer>
+
+
+<!-- BOTTOM NAV -->
+
+<nav class="bottom-nav">
+
+    <a
+    href="#"
+    class="active">
+
+        <span>🏠</span>
+        Home
+
+    </a>
+
+
+    <a
+    href="#downloader"
+    onclick="scrollToDownloader()">
+
+        <span>⬇️</span>
+        Download
+
+    </a>
+
+
+    <a
+    href="#plans">
+
+        <span>⭐</span>
+        Premium
+
+    </a>
+
+
+    <a
+    href="https://wa.me/233257906873"
+    target="_blank">
+
+        <span>💬</span>
+        Support
+
+    </a>
+
 </nav>
 
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>
-We Provide Solutions
-That Drive Your Business
-to <span>Success.</span>
-</h1>
-
-<p>
-Kenneth Business Solutions provides professional,
-reliable and innovative services that help
-businesses grow and achieve their goals.
-</p>
-<p>📞 Phone: 0257906873</p>
-
-<p>📧 Email: kennethyeboah223@gmail.com</p>
-
-<a href="https://wa.me/233257906873"
-class="btn"
-style="background:#25D366;color:white;">
-💬 Chat on WhatsApp
-</a>
-<a href="#services" class="btn">Our Services</a>
-<a href="#contact" class="btn btn-outline">Contact Us</a>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div>
-<h2>50+</h2>
-<p>Happy Clients</p>
-</div>
-
-<div>
-<h2>100+</h2>
-<p>Projects Done</p>
-</div>
-
-<div>
-<h2>5+</h2>
-<p>Years Experience</p>
-</div>
-
-<div>
-<h2>24/7</h2>
-<p>Support</p>
-</div>
-
-</section><section id="services" style="padding:80px 8%;">
-
-<h2 style="text-align:center;font-size:40px;color:#021b4f;margin-bottom:50px;">
-Our Services
-</h2>
-<p>
-KBS Business provides reliable business solutions for individuals, startups, and growing companies.
-</p>
-
-<p>
-Our services include business support, customer assistance, digital solutions, consulting, and professional guidance to help clients achieve their goals.
-</p>
-
-<p>
-We focus on quality service, customer satisfaction, innovation, and long-term business growth.
-</p>
-
-<p>
-Our mission is to provide dependable services while building strong relationships with our clients through trust, professionalism, and excellence.
-</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
-
-<div onclick="alert('Business Consulting Service')" style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
-<h3 style="color:#0066ff;margin-bottom:15px;">Business Consulting</h3>
-<p>Expert advice and strategies to help your business grow and succeed.</p>
-</div>
-
-<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
-<h3 style="color:#0066ff;margin-bottom:15px;">Digital Solutions</h3>
-<p>Fast and reliable digital services tailored to your business needs.</p>
-</div>
-
-<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
-<h3 style="color:#0066ff;margin-bottom:15px;">Customer Support</h3>
-<p>Friendly and professional support whenever you need help.</p>
-</div>
-
-<div style="background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
-<h3 style="color:#0066ff;margin-bottom:15px;">Technology Solutions</h3>
-<p>Modern technology services to improve business efficiency.</p>
-</div>
-
-</div>
-
-</section>
-<section style="padding:80px 8%;background:#f8f9fa;">
-<h2 style="text-align:center;font-size:40px;color:#021b4f;">
-Why Choose KBS Business?
-</h2>
-
-<p style="text-align:center;max-width:800px;margin:20px auto;line-height:1.8;">
-KBS Business is dedicated to helping businesses grow through professional support, innovative solutions, and customer-focused services. We prioritize quality, reliability, and long-term success for our clients.
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px;">
-<div style="background:white;padding:25px;border-radius:15px;">
-<h3>Professional Service</h3>
-<p>Experienced and dedicated support for businesses.</p>
-</div>
-
-<div style="background:white;padding:25px;border-radius:15px;">
-<h3>Trusted Solutions</h3>
-<p>Reliable services tailored to your needs.</p>
-</div>
-
-<div style="background:white;padding:25px;border-radius:15px;">
-<h3>Customer Focus</h3>
-<p>Your satisfaction and success are our priorities.</p>
-</div>
-</div>
-</section>
-
-<section id="about" style="padding:80px 8%;background:white;">
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;">
-
-<div>
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
-style="width:100%;border-radius:20px;">
-</div>
-
-<div>
-
-<h2 style="font-size:42px;color:#021b4f;margin-bottom:20px;">
-About Kenneth Business Solutions
-</h2>
-
-<p style="line-height:1.9;font-size:17px;">
-Kenneth Business Solutions is committed to providing
-quality services that help businesses grow and achieve
-their goals. We focus on professionalism, innovation,
-customer satisfaction and long-term success.
-</p>
-
-<br>
-
-<p style="line-height:1.9;font-size:17px;">
-Our mission is to help businesses become more efficient,
-more profitable and better connected with their customers.
-</p>
-
-</div>
-
-</div>
-
-</section>
-<section id="reviews" style="padding:80px 8%;background:#f5f7fb;">
-
-<h2 style="text-align:center;font-size:40px;margin-bottom:40px;">
-Customer Reviews
-</h2>
-
-<div style="background:white;padding:25px;border-radius:15px;margin-bottom:20px;">
-★★★★★
-<p>Excellent website support and quick response.</p>
-<b>— Michael K.</b>
-</div>
-
-<div style="background:white;padding:25px;border-radius:15px;margin-bottom:20px;">
-★★★★★
-<p>Professional service and easy communication.</p>
-<b>— Sarah A.</b>
-</div>
-
-<div style="background:white;padding:25px;border-radius:15px;">
-★★★★★
-<p>Helped me get my business online quickly.</p>
-<b>— Daniel O.</b>
-</div>
-
-</section>
-<section style="padding:80px 20px;background:#ffffff;">
-<h2 style="text-align:center;font-size:40px;">Why Choose KBS Business?</h2>
-
-<div style="max-width:900px;margin:auto;text-align:center;">
-
-<p>✅ Affordable digital services</p>
-
-<p>✅ Fast customer support</p>
-
-<p>✅ Professional website creation</p>
-
-<p>✅ Trusted business assistance</p>
-
-<p>✅ Friendly and reliable communication</p>
-
-</div>
-</section>
-<section id="contact" style="padding:80px 8%;background:#021b4f;color:white;">
-
-<h2 style="text-align:center;font-size:40px;margin-bottom:40px;">
-Contact Us
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
-
-<div>
-
-<h3 style="margin-bottom:20px;">Get In Touch</h3>
-
-<p>📞 025 790 6873</p>
-<br>
-
-<a href="mailto:kennethyeboah223@gmail.com">📧 kennethyeboah223@gmail.com</a>
-<br>
-
-<p>📍 Adum, Ghana</p>
-
-</div>
-
-<div>
-
-<form>
-
-<input id="customerName" type="text" placeholder="Your Name" style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:8px;">
-
-<input id="customerEmail" type="email" placeholder="Your Email" style="width:100%;padding:15px;margin-bottom:15px;">
-
-<textarea id="customerMessage"
-placeholder="Your Message"
-style="width:100%;height:120px;padding:15px;border:none;border-radius:8px;"></textarea>
-
-<p>
-<a href="terms.html" style="color:white;">Terms & Conditions</a>
-</p>
-</p>
-<br><br>
-
-<button type="button" onclick="saveCustomer()" style="background:#0066ff;color:white;border:none;padding:15px 30px;border-radius:8px;">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section><footer style="background:#01163f;color:white;padding:40px 8%;text-align:center;">
-
-<h3 style="margin-bottom:15px;">
-Kenneth Business Solutions
-</h3>
-
-<p style="margin-bottom:10px;">
-Professional and reliable solutions for business growth.
-</p>
-
-<p>
-© 2026 Kenneth Business Solutions. All Rights Reserved.
-</p>
-<p>
-<a href="privacy.html" style="color:white;">Privacy Policy</a> |
-<a href="terms.html" style="color:white;">Terms & Conditions</a>
-</p>
-</footer>
-
-
-<a href="https://wa.me/233257906873"
-target="_blank"
-style="
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-color:white;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-z-index:999;
-">
-💬
-</a>
-
 
 <script>
 
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach((entry)=>{
-if(entry.isIntersecting){
-entry.target.style.opacity='1';
-entry.target.style.transform='translateY(0)';
-}
-});
-});
+/* ANALYZE VIDEO */
 
-document.querySelectorAll('section').forEach((section)=>{
-section.style.opacity='0';
-section.style.transform='translateY(40px)';
-section.style.transition='all 0.8s ease';
-observer.observe(section);
-});
+function analyzeVideo(){
+
+    const url =
+        document.getElementById("videoURL").value.trim();
+
+    const result =
+        document.getElementById("result");
+
+
+    if(!url){
+
+        result.innerHTML =
+        "⚠️ Please paste a video URL first.";
+
+        return;
+
+    }
+
+
+    result.innerHTML =
+    "🔍 Checking the link...";
+
+
+    /*
+    IMPORTANT:
+
+    This is only the front-end.
+
+    Later we connect this button
+    to our secure backend that handles
+    permitted downloads.
+    */
+
+
+    setTimeout(function(){
+
+        result.innerHTML =
+
+        "✅ Link received!<br><br>" +
+
+        "<button " +
+
+        "style='padding:10px 18px;" +
+        "border:0;border-radius:8px;" +
+        "background:#0057d9;" +
+        "color:white;font-weight:bold;'" +
+
+        "onclick='connectDownloader()'>" +
+
+        "Continue" +
+
+        "</button>";
+
+    },1000);
+
+}
+
+
+/* FUTURE DOWNLOADER */
+
+function connectDownloader(){
+
+    alert(
+        "The download engine will be connected next."
+    );
+
+}
+
+
+/* PREMIUM */
+
+function showPremium(){
+
+    alert(
+        "Premium payments will be connected next."
+    );
+
+}
+
+
+/* SCROLL */
+
+function scrollToDownloader(){
+
+    window.scrollTo({
+        top:180,
+        behavior:"smooth"
+    });
+
+}
 
 </script>
-<script>
-function toggleMenu() {
-const nav = document.querySelector('.nav-links');
-nav.classList.toggle('active');
-}
-</script>
-
-<script>
-const supabaseUrl = 'https://nqbnfhgvexokxjobrasp.supabase.co';
-
-const supabaseKey = sb_publishable_nDhlT9nfY02Jf6brBAzz9w_wYPVQulZ
-
-const supabase = window.supabase.createClient(
-  supabaseUrl,
-  supabaseKey
-);
-
-async function saveCustomer() {
-  const name = document.getElementById("customerName").value;
-const email = document.getElementById("customerEmail").value;
-const message = document.getElementById("customerMessage").value;
-
-  const { data, error } = await supabase
-  .from("Customers")
-  .insert([{ 
-    Name: name, 
-    Email: email, 
-    Message: message 
-  }])
-  .select();
-if (error) {
-  alert("Error: " + error.message);
-} else {
-  alert("Thank you! Your details have been saved.");
-}
-}
-</script>
-<section id="buy-data" style="padding:40px; background:#f5f7fb;">
-  <h2>Buy Data Bundle</h2>
-
-  <label>Choose Network</label><br>
-  <select id="network">
-    <option>MTN</option>
-    <option>Telecel</option>
-    <option>AirtelTigo</option>
-  </select><br><br>
-
-  <label>Choose Bundle</label><br>
-  <select id="bundle">
-    <option>1GB - GH₵5</option>
-    <option>2GB - GH₵10</option>
-    <option>5GB - GH₵25</option>
-    <option>10GB - GH₵50</option>
-  </select><br><br>
-
-  <label>Customer Phone Number</label><br>
-  <input type="tel" id="phone" placeholder="Enter number" style="padding:10px; width:100%; max-width:350px;"><br><br>
-
-  <button onclick="orderData()" style="background:#021b4f;color:white;padding:12px 20px;border:none;border-radius:8px;">
-    Order on WhatsApp
-  </button>
-</section>
-
-<script>
-function orderData() {
-  let network = document.getElementById("network").value;
-  let bundle = document.getElementById("bundle").value;
-  let phone = document.getElementById("phone").value;
-
-  if (phone === "") {
-    alert("Please enter customer phone number");
-    return;
-  }
-
-  let myWhatsApp = "233XXXXXXXXX"; // replace with your WhatsApp number
-  let message = `Hello KBS Business, I want to buy data.%0A%0ANetwork: ${network}%0ABundle: ${bundle}%0APhone Number: ${phone}`;
-
-  window.open(`https://wa.me/${myWhatsApp}?text=${message}`, "_blank");
-}
-</script>
-<footer style="text-align:center;padding:20px;background:#01163f;color:white;">
-<p>&copy; 2026 KBS Business. All Rights Reserved.</p>
-
-<p>
-<a href="privacy.html" style="color:white;">Privacy Policy</a> |
-<a href="terms.html" style="color:white;">Terms & Conditions</a> |
-<a href="#contact" style="color:white;">Contact</a>
-</p>
 
 
-
-</footer>
 </body>
 </html>
