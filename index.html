@@ -642,15 +642,13 @@ footer strong{
 <script>
 
 /* ANALYZE VIDEO */
-
-function analyzeVideo(){
+async function analyzeVideo(){
 
     const url =
         document.getElementById("videoURL").value.trim();
 
     const result =
         document.getElementById("result");
-
 
     if(!url){
 
@@ -661,48 +659,41 @@ function analyzeVideo(){
 
     }
 
-
     result.innerHTML =
-    "🔍 Checking the link...";
+    "🔍 Connecting to KBS Video server...";
 
+    try {
 
-    /*
-    IMPORTANT:
+        const response = await fetch(
+            "https://kbs-video-backend.otfkingvon233.workers.dev/api/video"
+        );
 
-    This is only the front-end.
+        const data = await response.json();
 
-    Later we connect this button
-    to our secure backend that handles
-    permitted downloads.
-    */
+        if(data.success){
 
+            result.innerHTML =
+            "✅ Connected successfully!<br><br>" +
+            "KBS Video backend is working.";
 
-    setTimeout(function(){
+        } else {
+
+            result.innerHTML =
+            "❌ Backend returned an error.";
+
+        }
+
+    } catch(error){
+
+        console.error(error);
 
         result.innerHTML =
+        "❌ Could not connect to the KBS Video server.";
 
-        "✅ Link received!<br><br>" +
-
-        "<button " +
-
-        "style='padding:10px 18px;" +
-        "border:0;border-radius:8px;" +
-        "background:#0057d9;" +
-        "color:white;font-weight:bold;'" +
-
-        "onclick='connectDownloader()'>" +
-
-        "Continue" +
-
-        "</button>";
-
-    },1000);
+    }
 
 }
-
-
 /* FUTURE DOWNLOADER */
-
 function connectDownloader(){
 
     alert(
