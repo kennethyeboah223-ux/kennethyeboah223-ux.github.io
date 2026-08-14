@@ -7,6 +7,7 @@
 <title>My Account Monitor</title>
 
 <style>
+
 body {
     margin: 0;
     padding: 20px;
@@ -71,6 +72,7 @@ button {
     color: white;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .updated {
@@ -79,6 +81,7 @@ button {
     font-size: 12px;
     margin-top: 12px;
 }
+
 </style>
 </head>
 
@@ -92,7 +95,7 @@ button {
 
 <h2>Current Balance</h2>
 
-<div class="amount">
+<div class="amount" id="balance">
 GH₵100.00
 </div>
 
@@ -104,22 +107,22 @@ GH₵100.00
 
 <div class="stat">
 🎯 Bets
-<strong>0</strong>
+<strong id="bets">0</strong>
 </div>
 
 <div class="stat">
 ✅ Wins
-<strong>0</strong>
+<strong id="wins">0</strong>
 </div>
 
 <div class="stat">
 ❌ Losses
-<strong>0</strong>
+<strong id="losses">0</strong>
 </div>
 
 <div class="stat">
 💰 Profit
-<strong>GH₵0</strong>
+<strong id="profit">GH₵0</strong>
 </div>
 
 </div>
@@ -139,8 +142,6 @@ Last updated: Not yet
 </div>
 
 </div>
-
-<script>
 
 <script>
 
@@ -173,28 +174,33 @@ function updateMonitor() {
         isNaN(winsNumber) ||
         isNaN(lossesNumber)
     ) {
+
         alert("Please enter numbers only.");
+
         return;
     }
 
     const profit = balanceNumber - 100;
 
-    document.querySelector(".amount").innerText =
+    document.getElementById("balance").innerText =
         "GH₵" + balanceNumber.toFixed(2);
 
-    const stats = document.querySelectorAll(".stat strong");
+    document.getElementById("bets").innerText =
+        betsNumber;
 
-    stats[0].innerText = betsNumber;
-    stats[1].innerText = winsNumber;
-    stats[2].innerText = lossesNumber;
-    stats[3].innerText = "GH₵" + profit.toFixed(2);
+    document.getElementById("wins").innerText =
+        winsNumber;
+
+    document.getElementById("losses").innerText =
+        lossesNumber;
+
+    document.getElementById("profit").innerText =
+        "GH₵" + profit.toFixed(2);
 
     document.getElementById("updated").innerText =
         "Last updated: " + new Date().toLocaleString();
 
 }
-
-</script>
 
 </script>
 
