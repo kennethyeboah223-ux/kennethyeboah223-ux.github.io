@@ -142,12 +142,59 @@ Last updated: Not yet
 
 <script>
 
+<script>
+
 function updateMonitor() {
+
+    const balance = prompt("Enter your current balance:");
+
+    if (balance === null) return;
+
+    const bets = prompt("Enter total bets:");
+
+    if (bets === null) return;
+
+    const wins = prompt("Enter total wins:");
+
+    if (wins === null) return;
+
+    const losses = prompt("Enter total losses:");
+
+    if (losses === null) return;
+
+    const balanceNumber = Number(balance);
+    const betsNumber = Number(bets);
+    const winsNumber = Number(wins);
+    const lossesNumber = Number(losses);
+
+    if (
+        isNaN(balanceNumber) ||
+        isNaN(betsNumber) ||
+        isNaN(winsNumber) ||
+        isNaN(lossesNumber)
+    ) {
+        alert("Please enter numbers only.");
+        return;
+    }
+
+    const profit = balanceNumber - 100;
+
+    document.querySelector(".amount").innerText =
+        "GH₵" + balanceNumber.toFixed(2);
+
+    const stats = document.querySelectorAll(".stat strong");
+
+    stats[0].innerText = betsNumber;
+    stats[1].innerText = winsNumber;
+    stats[2].innerText = lossesNumber;
+    stats[3].innerText = "GH₵" + profit.toFixed(2);
 
     document.getElementById("updated").innerText =
         "Last updated: " + new Date().toLocaleString();
 
 }
+
+</script>
 
 </script>
 
