@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Account Monitor</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #111827;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.balance {
+    text-align: center;
+}
+
+.balance h2 {
+    color: #667085;
+    font-size: 15px;
+}
+
+.balance .amount {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.stat {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #0057d9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.updated {
+    text-align: center;
+    color: #667085;
+    font-size: 12px;
+    margin-top: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 My Account Monitor</h1>
+
+    <div class="card balance">
+
+        <h2>Current Balance</h2>
+
+        <div class="amount">
+            GH₵100.00
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="stats">
+
+            <div class="stat">
+                🎯 Bets
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                ✅ Wins
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                ❌ Losses
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                💰 Profit
+                <strong>GH₵0</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <button onclick="updateMonitor()">
+            🔄 Update Monitor
+        </button>
+
+        <div class="updated" id="updated">
+            Last updated: Not yet
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function updateMonitor() {
+
+    const now = new Date();
+
+    document.getElementById("updated").innerText =
+        "Last updated: " + now.toLocaleString();
+
+}
+
+</script>
+
+</body>
+</html>
