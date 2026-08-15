@@ -665,7 +665,18 @@ async function analyzeVideo(){
     try {
 
         const response = await fetch(
-            "https://kbs-video-backend.otfkingvon233.workers.dev/api/video"
+            "https://kbs-video-backend.otfkingvon233.workers.dev",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    url: url
+                })
+            }
         );
 
         const data = await response.json();
@@ -673,13 +684,14 @@ async function analyzeVideo(){
         if(data.success){
 
             result.innerHTML =
-            "✅ Connected successfully!<br><br>" +
-            "KBS Video backend is working.";
+            "✅ Video analyzed successfully!<br><br>" +
+            "KBS Video backend is connected.";
 
         } else {
 
             result.innerHTML =
-            "❌ Backend returned an error.";
+            "❌ " +
+            (data.message || "Could not analyze this video.");
 
         }
 
