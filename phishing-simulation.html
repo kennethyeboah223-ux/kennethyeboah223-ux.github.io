@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Awareness Simulation</title>
+
+  <title>Security Awareness Lab</title>
 
   <style>
     body {
@@ -19,7 +20,7 @@
     .box {
       background: white;
       width: 90%;
-      max-width: 400px;
+      max-width: 420px;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.15);
@@ -45,12 +46,23 @@
       cursor: pointer;
     }
 
-    #warning {
+    #result {
       display: none;
       margin-top: 20px;
       padding: 15px;
       background: #fff3cd;
       border-radius: 8px;
+      text-align: left;
+    }
+
+    .score {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    li {
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -58,6 +70,7 @@
 <body>
 
   <div class="box">
+
     <h2>Account Verification</h2>
 
     <p>Security verification is required.</p>
@@ -66,21 +79,58 @@
 
     <input type="password" placeholder="Demo password">
 
-    <button onclick="showWarning()">Verify Account</button>
+    <button onclick="runSimulation()">
+      Verify Account
+    </button>
 
-    <div id="warning">
-      <strong>⚠️ PHISHING SIMULATION</strong>
+    <div id="result">
+
+      <h3>⚠️ PHISHING SIMULATION</h3>
+
       <p>
         This was a harmless security-awareness simulation.
+      </p>
+
+      <p>
         No username or password was collected or transmitted.
       </p>
+
+      <div class="score">
+        Security Score: 0/100
+      </div>
+
+      <h4>🚩 Red Flags</h4>
+
+      <ul>
+        <li>Unexpected account verification request</li>
+        <li>Request for login information</li>
+        <li>Pressure to act quickly</li>
+        <li>Unknown or suspicious website address</li>
+      </ul>
+
+      <h4>🛡️ What to do</h4>
+
+      <ul>
+        <li>Don't enter your password.</li>
+        <li>Check the website address carefully.</li>
+        <li>Don't click suspicious links.</li>
+        <li>Contact the organization through its official website.</li>
+      </ul>
+
+      <button onclick="location.reload()">
+        Run Simulation Again
+      </button>
+
     </div>
+
   </div>
 
   <script>
-    function showWarning() {
-      document.getElementById("warning").style.display = "block";
+
+    function runSimulation() {
+      document.getElementById("result").style.display = "block";
     }
+
   </script>
 
 </body>
