@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Awareness Simulation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 96%;
+      padding: 12px;
+      margin-top: 10px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #warning {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3cd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Account Verification</h2>
+
+    <p>Security verification is required.</p>
+
+    <input type="text" placeholder="Demo username">
+
+    <input type="password" placeholder="Demo password">
+
+    <button onclick="showWarning()">Verify Account</button>
+
+    <div id="warning">
+      <strong>⚠️ PHISHING SIMULATION</strong>
+      <p>
+        This was a harmless security-awareness simulation.
+        No username or password was collected or transmitted.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showWarning() {
+      document.getElementById("warning").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
